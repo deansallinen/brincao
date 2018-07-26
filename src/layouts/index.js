@@ -1,8 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-
 import Header from '../components/header'
+import Footer from '../components/footer'
+import Capa from '../components/images/heroes/capa.jpg'
+import Hero from '../components/hero'
 import './index.css'
 
 const Layout = ({ children, data }) => (
@@ -14,7 +16,8 @@ const Layout = ({ children, data }) => (
         { name: 'keywords', content: 'sample, something' },
       ]}
     />
-    <Header siteTitle={data.site.siteMetadata.title} />
+    <Header />
+    <Hero source={Capa} />
     <div
       style={{
         margin: '0 auto',
@@ -25,6 +28,7 @@ const Layout = ({ children, data }) => (
     >
       {children()}
     </div>
+    <Footer />
   </div>
 )
 

@@ -1,35 +1,29 @@
-import React from 'react';
-import Link from 'gatsby-link';
-import Menu from './menu';
+import React from 'react'
+import Link from 'gatsby-link'
+import Menu from './menu'
+import styled from 'styled-components'
+import logo from './images/logo.png'
 
-const Header = ({ siteTitle }) => (
-  <div
-    style={{
-      background: 'white',
-      marginBottom: '1.45rem',
-    }}
-  >
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '1.45rem 1.0875rem',
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: 'green',
-            textDecoration: 'none',
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
+const SiteHeader = styled.header`
+  background: white;
+  margin: 1.45rem auto 1.45rem auto;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  max-width: 1500px;
+`
+
+const Logo = styled.img`
+  margin: 0;
+`
+
+const Header = () => (
+  <SiteHeader>
+    <Link to="/">
+      <Logo src={logo} alt="" />
+    </Link>
     <Menu />
-  </div>
+  </SiteHeader>
 )
 
 export default Header
