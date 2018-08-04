@@ -6,9 +6,11 @@ import Footer from '../components/footer'
 import Capa from '../components/images/heroes/capa.jpg'
 import Hero from '../components/hero'
 import './index.css'
+import Sidebar from '../components/sidebar'
 
 const Layout = ({ children, data }) => (
   <div>
+    <Sidebar />
     <Helmet
       title={data.site.siteMetadata.title}
       meta={[

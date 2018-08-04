@@ -1,12 +1,13 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import Menu from './menu'
+// import Menu from './menu'
 import styled from 'styled-components'
 import logo from './images/logo.png'
+import Sidebar from './sidebar'
 
 const SiteHeader = styled.header`
   background: white;
-  margin: 1.45rem auto 1.45rem auto;
+  padding: 1.45rem auto 1.45rem auto;
   max-width: 1500px;
   text-align: center;
   display: grid;
@@ -29,7 +30,8 @@ const Header = () => (
     <Link to="/">
       <Logo src={logo} alt="" style={{ gridArea: 'logo' }} />
     </Link>
-    <Menu />
+    {/* <Menu /> */}
+    {/* <Sidebar /> */}
   </SiteHeader>
 )
 
