@@ -3,19 +3,24 @@ import Link from 'gatsby-link'
 import styled from 'styled-components'
 
 const MenuList = styled.div`
-  text-decoration: none;
   float: right;
   text-transform: uppercase;
   font-family: sans-serif;
   padding-bottom: 1rem;
+  grid-area: menu;
 `
 const MenuItem = styled.h5`
-  display: inline-block;
-  margin: 0 1rem 0 0;
+  display: block;
+
+  @media screen and (min-width: 800px) {
+    display: inline-block;
+    margin: 0 1rem 0 0;
+  }
 `
 
 const MenuLink = styled(Link)`
   color: #97c03c;
+  text-decoration: none;
 `
 
 const Active = {
@@ -25,6 +30,7 @@ const Active = {
 class Menu extends React.Component {
   state = {
     active: 1,
+    responsive: false,
   }
   render() {
     return (

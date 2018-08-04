@@ -45,10 +45,10 @@ const socialMedia = [
 
 const Contact = () => {
   return (
-    <div>
+    <div style={{ gridArea: 'contact' }}>
       {socialMedia.map(social => {
         return (
-          <Social>
+          <Social key={social.service}>
             <Icon>
               <img src={social.icon} alt={social.service} />
             </Icon>

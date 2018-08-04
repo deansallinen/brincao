@@ -7,10 +7,17 @@ import logo from './images/logo.png'
 const SiteHeader = styled.header`
   background: white;
   margin: 1.45rem auto 1.45rem auto;
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-around;
   max-width: 1500px;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: 'logo' 'menu';
+
+  @media screen and (min-width: 800px;) {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+  }
 `
 
 const Logo = styled.img`
@@ -20,7 +27,7 @@ const Logo = styled.img`
 const Header = () => (
   <SiteHeader>
     <Link to="/">
-      <Logo src={logo} alt="" />
+      <Logo src={logo} alt="" style={{ gridArea: 'logo' }} />
     </Link>
     <Menu />
   </SiteHeader>

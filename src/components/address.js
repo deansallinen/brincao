@@ -1,12 +1,30 @@
 import React from 'react'
+import dogPaw from '../components/images/icons/dog-paw.svg'
+import styled from 'styled-components'
 
-const Address = () => {
+const Paw = styled.div`
+  width: 20px;
+  height: auto;
+`
+
+const Address = styled.div`
+  grid-area: address;
+`
+
+const AddressBlock = () => {
   return (
-    <div>
-      Brincão RS 129, n. 920 – Chácara da Bandeira Linha São José – Estrela – RS
-      95880-000 Brasil
-    </div>
+    <Address>
+      <h4 style={{ lineHeight: '1.75rem' }}>
+        Brincão RS 129, n. 920<br />
+        Chácara da Bandeira, Linha São José<br />
+        Estrela, RS<br />
+        95880-000 Brasil
+      </h4>
+      <Paw>
+        <img src={dogPaw} alt="" />
+      </Paw>
+    </Address>
   )
 }
 
-export default Address
+export default AddressBlock
