@@ -1,7 +1,9 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import { Link } from 'gatsby'
 import Testimonial from '../components/testimonial'
 import loremIpsum from 'lorem-ipsum'
+import Layout from '../components/layout'
+
 
 const url = 'https://randomuser.me/api/?nat=us&results=10'
 
@@ -33,11 +35,13 @@ class Testimonials extends React.Component {
     })
 
     return (
-      <div>
-        <h1>Testimonials</h1>
-        <div>{all}</div>
-        <Link to="/">Go back to the homepage</Link>
-      </div>
+      <Layout>
+        <div>
+          <h1>Testimonials</h1>
+          <div>{all}</div>
+          <Link to="/">Go back to the homepage</Link>
+        </div>
+      </Layout>
     )
   }
 }

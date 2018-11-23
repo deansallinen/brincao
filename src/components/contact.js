@@ -1,8 +1,8 @@
 import React from 'react'
-import twitter from '../components/images/icons/twitter.svg'
-import facebook from '../components/images/icons/facebook.svg'
-import instagram from '../components/images/icons/instagram.svg'
-import whatsapp from '../components/images/icons/whatsapp.svg'
+import twitter from '../images/icons/twitter.svg'
+import facebook from '../images/icons/facebook.svg'
+import instagram from '../images/icons/instagram.svg'
+import whatsapp from '../images/icons/whatsapp.svg'
 import styled from 'styled-components'
 
 const Social = styled.div`

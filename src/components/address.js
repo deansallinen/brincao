@@ -1,5 +1,5 @@
 import React from 'react'
-import dogPaw from '../components/images/icons/dog-paw.svg'
+import dogPaw from '../images/icons/dog-paw.svg'
 import styled from 'styled-components'
 
 const Paw = styled.div`

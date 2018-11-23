@@ -1,9 +1,7 @@
 import React from 'react'
-import Link from 'gatsby-link'
-// import Menu from './menu'
+import { StaticQuery, graphql, Link } from 'gatsby'
 import styled from 'styled-components'
-import logo from './images/logo.png'
-import Sidebar from './sidebar'
+import Img from 'gatsby-image'
 
 const SiteHeader = styled.header`
   background: white;
@@ -21,18 +19,27 @@ const SiteHeader = styled.header`
   }
 `
 
-const Logo = styled.img`
-  margin: 0;
-`
-
-const Header = () => (
-  <SiteHeader>
-    <Link to="/">
-      <Logo src={logo} alt="" style={{ gridArea: 'logo' }} />
-    </Link>
-    {/* <Menu /> */}
-    {/* <Sidebar /> */}
-  </SiteHeader>
+export default () => (
+  <StaticQuery
+    query={graphql`
+  query {
+    imageOne: file(relativePath: { eq: "logo.png" }) {
+      childImageSharp {
+        fixed(width: 300, height: 134) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+  }
+  `}
+    render={
+      data => (
+        <SiteHeader>
+          <Link to="/">
+            <Img fixed={data.imageOne.childImageSharp.fixed} />
+          </Link>
+        </SiteHeader>
+      )
+    }
+  />
 )
-
-export default Header

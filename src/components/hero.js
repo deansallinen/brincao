@@ -1,23 +1,32 @@
 import React from 'react'
 import styled from 'styled-components'
+import { StaticQuery, graphql } from 'gatsby'
+import Img from 'gatsby-image'
+
 
 const Wrapper = styled.div`
-  max-width: 1900px;
-  margin: 0 auto;
+  margin: 1rem auto;
 `
 
-const Banner = styled.img`
-  width: 100vw;
-  height: 30vh;
-  object-fit: cover;
-`
+export default () => (
+  <StaticQuery
+    query={graphql`
+  query {
+    hero: file(relativePath: { eq: "heroes/capa.jpg" }) {
+      childImageSharp {
+        fluid(maxHeight: 1823) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+  `}
 
-const Hero = props => {
-  return (
-    <Wrapper>
-      <Banner src={props.source} alt="" />
-    </Wrapper>
-  )
-}
-
-export default Hero
+    render={data => (
+      <Wrapper>
+        <Img fluid={data.hero.childImageSharp.fluid} />
+      </Wrapper >
+    )
+    }
+  />
+)
