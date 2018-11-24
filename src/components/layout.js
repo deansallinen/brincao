@@ -25,8 +25,8 @@ const Layout = ({ children }) => (
         <Helmet
           title={data.site.siteMetadata.title}
           meta={[
-            { name: 'description', content: 'Sample' },
-            { name: 'keywords', content: 'sample, something' },
+            { name: 'description', content: 'A Brincão é um novo tipo de creche para cães.' },
+            { name: 'keywords', content: 'creche, cães' },
           ]}
         />
         <Header />
