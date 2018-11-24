@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import Link from 'gatsby-link'
+import { Link } from 'gatsby'
 
 const Primary = styled.button`
   background: ${props => (props.secondary ? '#fff' : '#457bbd')};
@@ -26,8 +26,8 @@ class Button extends React.Component {
   render() {
     return (
       <Link to={this.props.to}>
-        <Primary>{this.props.children}</Primary>
-        <Primary secondary>{this.props.children}</Primary>
+        <button className="button is-large">{this.props.children}</button>
+        {/* <Primary secondary>{this.props.children}</Primary> */}
       </Link>
     )
   }

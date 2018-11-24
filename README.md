@@ -9,15 +9,15 @@ TODO:
 - Standardize typography
 - Media queries for responsiveness
 - Add plugins:
-    - Gatsby React Helmet
-    - Sitemap
-    - Google Analytics
-    - Netlify
-    - Styled Components
-    - Typography?
-    - gatsby-source-instagram
-- Bulma?
-- Rewrite Menu?
+  - ~Gatsby React Helmet~
+  - Sitemap
+  - Google Analytics
+  - Netlify
+  - ~Styled Components~
+  - Typography?
+  - gatsby-source-instagram
+- ~Bulma~
+- ~Rewrite Menu~
 
 ## Deploy
 

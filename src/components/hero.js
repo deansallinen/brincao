@@ -2,31 +2,31 @@ import React from 'react'
 import styled from 'styled-components'
 import { StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
-
-
-const Wrapper = styled.div`
-  margin: 1rem auto;
-`
+import { H1, Container, Button } from '../components/helpers'
 
 export default () => (
   <StaticQuery
     query={graphql`
-  query {
-    hero: file(relativePath: { eq: "heroes/capa.jpg" }) {
-      childImageSharp {
-        fluid(maxHeight: 1823) {
-          ...GatsbyImageSharpFluid
+      query {
+        hero: file(relativePath: { eq: "heroes/capa.jpg" }) {
+          childImageSharp {
+            fluid(maxHeight: 1823) {
+              ...GatsbyImageSharpFluid
+            }
+          }
         }
       }
-    }
-  }
-  `}
-
+    `}
     render={data => (
-      <Wrapper>
+      <div class="hero">
         <Img fluid={data.hero.childImageSharp.fluid} />
-      </Wrapper >
-    )
-    }
+        {/* <div class="hero-body">
+          <div class="container">
+            <h1 class="title">Brincão</h1>
+            <h2 class="subtitle">Hero subtitle</h2>
+          </div>
+        </div> */}
+      </div>
+    )}
   />
 )

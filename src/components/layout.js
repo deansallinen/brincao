@@ -4,44 +4,39 @@ import Header from './header'
 import Footer from './footer'
 import Capa from '../images/heroes/capa.jpg'
 import Hero from './hero'
-import '../styles/index.css'
+// import '../styles/index.css'
+import '../sass/mystyles.scss'
 import Sidebar from './sidebar'
-import { StaticQuery, graphql } from 'gatsby';
+import { StaticQuery, graphql } from 'gatsby'
 
 const Layout = ({ children }) => (
   <StaticQuery
     query={graphql`
-  query SiteTitleQuery {
-    site {
-      siteMetadata {
-        title
+      query SiteTitleQuery {
+        site {
+          siteMetadata {
+            title
+          }
+        }
       }
-    }
-  }
-  `}
+    `}
     render={data => (
       <>
-        <Sidebar />
+        {/* <Sidebar /> */}
         <Helmet
           title={data.site.siteMetadata.title}
           meta={[
-            { name: 'description', content: 'A Brincão é um novo tipo de creche para cães.' },
+            {
+              name: 'description',
+              content: 'A Brincão é um novo tipo de creche para cães.',
+            },
             { name: 'keywords', content: 'creche, cães' },
           ]}
         />
-        <Header />
-        <Hero source={Capa} />
-        <div
-          style={{
-            margin: '0 auto',
-            maxWidth: 960,
-            padding: '0px 1.0875rem 1.45rem',
-            paddingTop: 0,
-          }}
-        >
-          {children}
-        </div>
-        <Footer />
+        <Header className="section" />
+        <Hero source={Capa} className="section" />
+        <section className="section">{children}</section>
+        <Footer className="section" />
       </>
     )}
   />

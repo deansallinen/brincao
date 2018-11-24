@@ -1,19 +1,16 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import Address from '../components/address'
 import Contact from '../components/contact'
 import Layout from '../components/layout'
-
+import { H1, H2, Container } from '../components/helpers'
 
 const Contato = () => (
   <Layout>
-
-    <div>
-      <h1>Contato</h1>
+    <Container>
+      <H1>Contato</H1>
       <Contact />
-      <h2>Venha nos Visitar!</h2>
-      <Address />
-    </div>
+      <H2>Venha nos Visitar!</H2>
+    </Container>
   </Layout>
 )
 

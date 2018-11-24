@@ -12,9 +12,17 @@ module.exports = {
         path: path.join(__dirname, `src`, `images`),
       },
     },
+    `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-source-instagram`,
+      options: {
+        username: `brincao`,
+      },
+    },
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
