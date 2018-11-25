@@ -45,6 +45,9 @@ const Servicos = () => (
           <Child className="box">
             <p className="heading">Diária de hospedagem de final de semana</p>
             <H1>R$ 30,00</H1>
+          </Child>
+        </Parent>
+      </Ancestor>
             <p>
               Obs: A diária é de 24 horas. Será acrescido $ 5,00 por turno a
               mais.​
@@ -53,9 +56,6 @@ const Servicos = () => (
               Exemplo: entrada sábado pela manhã e saindo domingo de tarde: $
               30,00 + $ 5,00 = $35,00
             </p>
-          </Child>
-        </Parent>
-      </Ancestor>
       <H2>Valores individuais para a Creche</H2>
       <Ancestor>
         <Parent>

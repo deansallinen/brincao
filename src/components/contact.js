@@ -39,7 +39,7 @@ const socialMedia = [
   {
     service: 'instagram',
     icon: instagram,
-    userName: '@brincao',
+    userName: '@brincaocreche',
   },
 ]
 

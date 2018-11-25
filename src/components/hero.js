@@ -1,8 +1,7 @@
 import React from 'react'
-import styled from 'styled-components'
 import { StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
-import { H1, Container, Button } from '../components/helpers'
+import { H1, Container } from '../components/helpers'
 
 export default () => (
   <StaticQuery

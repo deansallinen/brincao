@@ -16,7 +16,7 @@ module.exports = {
     {
       resolve: `gatsby-source-instagram`,
       options: {
-        username: `brincao`,
+        username: `brincaocreche`,
       },
     },
     `gatsby-plugin-react-helmet`,

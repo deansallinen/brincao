@@ -8,8 +8,34 @@ const Contato = () => (
   <Layout>
     <Container>
       <H1>Contato</H1>
-      <Contact />
-      <H2>Venha nos Visitar!</H2>
+      <form name="contact" netlify>
+        <div class="field">
+          <label class="label">Name</label>
+          <div class="control">
+            <input class="input" type="text" placeholder="Firstname Lastname" />
+          </div>
+        </div>
+        <div class="field">
+          <label class="label">Email</label>
+          <div class="control">
+            <input class="input" type="email" placeholder="name@example.com" />
+          </div>
+        </div>
+        <div class="field">
+          <label class="label">Message</label>
+          <div class="control">
+            <textarea class="textarea" placeholder="Your message here" />
+          </div>
+        </div>
+        <div class="field is-grouped">
+          <div class="control">
+            <button class="button is-link">Submit</button>
+          </div>
+          <div class="control">
+            <button class="button is-text">Cancel</button>
+          </div>
+        </div>
+      </form>
     </Container>
   </Layout>
 )

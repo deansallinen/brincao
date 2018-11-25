@@ -6,6 +6,9 @@ export const H1 = ({ children }) => <h1 className="title">{children}</h1>
 export const H2 = ({ children }) => <h2 className="subtitle">{children}</h2>
 
 // Layout
+export const Section = ({ children, className }) => (
+  <div className={`section ${className}`}>{children}</div>
+)
 export const Container = ({ children, className }) => (
   <div className={`container ${className}`}>{children}</div>
 )

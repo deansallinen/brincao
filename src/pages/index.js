@@ -1,8 +1,9 @@
 import React from 'react'
-import { Link, StaticQuery } from 'gatsby'
+import { Link, StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import Layout from '../components/layout'
 import { H1, Container, Button, Columns, Column } from '../components/helpers'
+import Instagram from '../components/instagram'
 
 const IndexPage = () => (
   <StaticQuery
@@ -52,6 +53,7 @@ const IndexPage = () => (
               <Img fluid={data.logo.childImageSharp.fluid} />
             </Column>
           </Columns>
+          <Instagram />
         </Container>
       </Layout>
     )}
