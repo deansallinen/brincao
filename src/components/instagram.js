@@ -2,11 +2,14 @@ import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import {
+  H1,
   Section,
   Container,
   Ancestor,
   Parent,
   Child,
+  Columns,
+  Column,
 } from '../components/helpers'
 
 export default () => (
@@ -23,8 +26,8 @@ export default () => (
               timestamp
               localFile {
                 childImageSharp {
-                  fixed(width: 150, height: 150) {
-                    ...GatsbyImageSharpFixed
+                  fluid(maxWidth: 350, maxHeight: 350, cropFocus: CENTER) {
+                    ...GatsbyImageSharpFluid
                   }
                 }
               }
@@ -36,15 +39,14 @@ export default () => (
     render={data => {
       return (
         <Container>
-          <Ancestor>
+          <H1>Nossos Instagram</H1>
+          <Columns className="is-multiline">
             {data.allInstaNode.edges.map(each => (
-              <Parent>
-                <Child>
-                  <Img fixed={each.node.localFile.childImageSharp.fixed} />
-                </Child>
-              </Parent>
+              <Column className="is-one-third">
+                <Img fluid={each.node.localFile.childImageSharp.fluid} />
+              </Column>
             ))}
-          </Ancestor>
+          </Columns>
         </Container>
       )
     }}

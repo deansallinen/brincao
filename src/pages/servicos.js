@@ -48,14 +48,13 @@ const Servicos = () => (
           </Child>
         </Parent>
       </Ancestor>
-            <p>
-              Obs: A diária é de 24 horas. Será acrescido $ 5,00 por turno a
-              mais.​
-            </p>
-            <p>
-              Exemplo: entrada sábado pela manhã e saindo domingo de tarde: $
-              30,00 + $ 5,00 = $35,00
-            </p>
+      <p>
+        Obs: A diária é de 24 horas. Será acrescido $ 5,00 por turno a mais.​
+      </p>
+      <p>
+        Exemplo: entrada sábado pela manhã e saindo domingo de tarde: $ 30,00 +
+        $ 5,00 = $35,00
+      </p>
       <H2>Valores individuais para a Creche</H2>
       <Ancestor>
         <Parent>

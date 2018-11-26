@@ -29,7 +29,9 @@ const Contato = () => (
         </div>
         <div class="field is-grouped">
           <div class="control">
-            <button class="button is-link">Submit</button>
+            <button type="submit" class="button is-link">
+              Submit
+            </button>
           </div>
           <div class="control">
             <button class="button is-text">Cancel</button>
