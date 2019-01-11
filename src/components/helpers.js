@@ -38,3 +38,4 @@ export const Button = ({ children, className, to }) => (
     <button className={`button is-large ${className}`}>{children}</button>
   </Link>
 )
+

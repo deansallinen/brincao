@@ -10,6 +10,13 @@ import {
   Columns,
   Column,
 } from '../components/helpers'
+import {GoogleMap} from '../components/googleMap'
+
+const Copyright = () => (
+  <div className="content has-text-centered">
+    <p className="is-size-10">© 2018 Brincão Creche. All rights reserved.</p>
+  </div>
+)
 
 export default () => {
   return (
@@ -21,16 +28,7 @@ export default () => {
             <Ancestor>
               <Parent>
                 <Child>
-                  <div>
-                    <iframe
-                      width="100%"
-                      height="auto"
-                      frameborder="0"
-                      style={{ border: 0 }}
-                      src="https://www.google.com/maps/embed/v1/place?q=Brinc%C3%A3o%20RS%20129%2C%20n.%20920%20%20Ch%C3%A1cara%20da%20Bandeira%2C%20Linha%20S%C3%A3o%20Jos%C3%A9%20%20Estrela%2C%20RS%20%2095880-000%20Brasil&key=AIzaSyChhUqUbak8-D52lLYY0C3JKH6w5hxVA7Q"
-                      allowfullscreen
-                    />
-                  </div>
+                  <GoogleMap />
                 </Child>
               </Parent>
               <Parent>
@@ -56,9 +54,9 @@ export default () => {
           </Column>
         </Columns>
       </Container>
-      <div className="content has-text-centered">
-        <p className="is-size-9">© 2018 Brincão Creche. All rights reserved.</p>
-      </div>
+      <Container>
+        <Copyright />
+      </Container>
     </footer>
   )
 }

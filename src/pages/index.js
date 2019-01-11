@@ -1,28 +1,16 @@
 import React from 'react'
-import { Link, StaticQuery, graphql } from 'gatsby'
-import Img from 'gatsby-image'
+import { Link } from 'gatsby'
 import Layout from '../components/layout'
 import { H1, Container, Button, Columns, Column } from '../components/helpers'
 import Instagram from '../components/instagram'
+import Logo from '../components/logo'
 
 const IndexPage = () => (
-  <StaticQuery
-    query={graphql`
-      query {
-        logo: file(relativePath: { eq: "Brincao.png" }) {
-          childImageSharp {
-            fluid(maxHeight: 100) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-      }
-    `}
-    render={data => (
       <Layout>
         <Container className="content">
           <H1>A Brincão é um novo tipo de creche para cães!</H1>
           <Columns>
+          
             <Column>
               <p>
                 Uma creche idealizada a partir do conceito de “tua casa para
@@ -49,15 +37,14 @@ const IndexPage = () => (
               </p>
               <Button to="/about">Mais sobre nós</Button>
             </Column>
+            
             <Column>
-              <Img fluid={data.logo.childImageSharp.fluid} />
+              <Logo />
             </Column>
+            
           </Columns>
-          <Instagram />
         </Container>
       </Layout>
-    )}
-  />
 )
 
 export default IndexPage
