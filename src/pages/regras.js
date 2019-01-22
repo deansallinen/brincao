@@ -60,7 +60,7 @@ export const query = graphql`
 query {
   hero: file(relativePath: { eq: "heroes/15.JPG" }) {
     childImageSharp {
-      fluid(maxHeight: 666, maxWidth: 1000) {
+      fluid(maxHeight: 450, maxWidth: 1000, cropFocus: CENTER, quality:100) {
         ...GatsbyImageSharpFluid
       }
     }

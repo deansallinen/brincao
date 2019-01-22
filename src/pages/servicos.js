@@ -24,6 +24,12 @@ const Servicos = ({ data }) => (
       <p> Além disso, os serviços da Brincão podem incluir busca e entrega, com dias e
         horários agendados, de acordo com as suas possibilidades.</p>
       <p> Serviços como banho e tosa devem ser providenciados diretamente pelo dono em petshop de sua preferência.</p>
+      <H2>Horário</H2>
+      <p>
+        Oferece um horário amplo, das <strong>7h às 19h</strong>, ou personalizado, conforme sua
+        necessidade.
+      </p>
+
       <H2>Hospedagem</H2>
       <Ancestor>
         <Parent>
@@ -79,11 +85,7 @@ const Servicos = ({ data }) => (
         ajustados. Fale com a gente!
       </p>
       <Button to="/contato">Fale com a gente!</Button>
-      <H1>Horário</H1>
-      <p>
-        Oferece um horário amplo, das 7h às 19h, ou personalizado, conforme sua
-        necessidade.
-      </p>
+
       <H1>Por que Brincão?</H1>
       <p>
         A Brincão foi pensada para o bem-estar de seu cãozinho. Ampla área
@@ -103,10 +105,11 @@ export default Servicos
 
 export const query = graphql`
 query {
-  hero: file(relativePath: { eq: "heroes/DSC_0886-min.JPG" }) {
+  hero: file(relativePath: { eq: "heroes/DSC_0054-min.JPG" }) {
     childImageSharp {
-      fluid(maxHeight: 666, maxWidth: 1000) {
+      fluid(maxHeight: 2000, maxWidth: 4608, quality:100, cropFocus: NORTHWEST) {
         ...GatsbyImageSharpFluid
+        presentationWidth
       }
     }
   }

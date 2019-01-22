@@ -24,7 +24,7 @@ class Header extends Component {
           query {
             logo: file(relativePath: { eq: "Brincao.png" }) {
               childImageSharp {
-                fixed(height: 60) {
+                fixed(height: 80) {
                   ...GatsbyImageSharpFixed
                 }
               }
@@ -44,9 +44,9 @@ class Header extends Component {
                 </Link>
                 <a
                   role="button"
-                  className="navbar-burger burger"
+                  className={`navbar-burger ${menuOpen ? 'is-active' : null}`}
                   aria-label="menu"
-                  aria-expanded="false"
+                  aria-expanded={menuOpen ? 'true' : 'false'}
                   data-target="navbarBasicExample"
                   onClick={this.toggleMenu}
                 >

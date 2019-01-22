@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { Link, graphql } from 'gatsby'
 import Layout from '../components/layout'
 import { H1, Container, Button, Columns, Column } from '../components/helpers'
 import Instagram from '../components/instagram'
@@ -56,10 +56,11 @@ export default IndexPage
 
 export const query = graphql`
 query {
-  hero: file(relativePath: { eq: "heroes/DSC_0880-min.JPG" }) {
+  hero: file(relativePath: { eq: "heroes/capa.jpg" }) {
     childImageSharp {
-      fluid(maxHeight: 1823) {
+      fluid(maxHeight: 1823, maxWidth: 4594, quality: 100) {
         ...GatsbyImageSharpFluid
+        presentationWidth
       }
     }
   }

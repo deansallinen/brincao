@@ -46,10 +46,12 @@ export default Contato
 
 export const query = graphql`
 query {
-  hero: file(relativePath: { eq: "heroes/DSC_0886-min.JPG" }) {
+
+hero: file(relativePath: { eq: "heroes/DSC_0880-min.JPG" }) {
     childImageSharp {
-      fluid(maxHeight: 666, maxWidth: 1000) {
+      fluid(maxWidth:3813, maxHeight: 1600, quality:100, cropFocus: SOUTH) {
         ...GatsbyImageSharpFluid
+        presentationWidth
       }
     }
   }
