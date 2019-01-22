@@ -4,8 +4,8 @@ import Contact from '../components/contact'
 import Layout from '../components/layout'
 import { H1, H2, Container } from '../components/helpers'
 
-const Contato = () => (
-  <Layout>
+const Contato = ({ data }) => (
+  <Layout hero={data.hero}>
     <Container>
       <H1>Contato</H1>
       <form name="contact" netlify>
@@ -43,3 +43,15 @@ const Contato = () => (
 )
 
 export default Contato
+
+export const query = graphql`
+query {
+  hero: file(relativePath: { eq: "heroes/DSC_0886-min.JPG" }) {
+    childImageSharp {
+      fluid(maxHeight: 666, maxWidth: 1000) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+}
+`

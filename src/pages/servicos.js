@@ -13,20 +13,17 @@ import {
   Columns,
 } from '../components/helpers'
 
-const Servicos = () => (
-  <Layout>
+const Servicos = ({ data }) => (
+  <Layout hero={data.hero}>
     <Container className="content">
       <H1>Serviços &amp; Preços</H1>
-      <p>
-        A Brincão oferece o serviço de creche para o dia inteiro, ou apenas um
-        turno, semanal ou mensal. Oferecemos também serviços de um hotel, para
-        hospedagens mais longas e alojamentos, quando necessários. Além disso,
-        os serviços da Brincão podem incluir busca e entrega, com dias e
-        horários agendados, de acordo com as suas possibilidades. Oferece um
-        horário amplo, das 7h às 19h, ou personalizado, conforme sua
-        necessidade. Serviços como banho e tosa devem ser providenciados
-        diretamente pelo dono em petshop de sua preferência.
-      </p>
+      <p>A Brincão oferece o serviço de creche para o dia inteiro, ou apenas um
+        turno, semanal ou mensal. </p>
+      <p>Oferecemos também serviços de um hotel, para
+        hospedagens mais longas e alojamentos, quando necessários.</p>
+      <p> Além disso, os serviços da Brincão podem incluir busca e entrega, com dias e
+        horários agendados, de acordo com as suas possibilidades.</p>
+      <p> Serviços como banho e tosa devem ser providenciados diretamente pelo dono em petshop de sua preferência.</p>
       <H2>Hospedagem</H2>
       <Ancestor>
         <Parent>
@@ -49,7 +46,7 @@ const Servicos = () => (
         </Parent>
       </Ancestor>
       <p>
-        Obs: A diária é de 24 horas. Será acrescido $ 5,00 por turno a mais.​
+        Obs: A diária é de 24 horas. Será acrescido $ 5,00 por turno a mais.
       </p>
       <p>
         Exemplo: entrada sábado pela manhã e saindo domingo de tarde: $ 30,00 +
@@ -103,3 +100,15 @@ const Servicos = () => (
 )
 
 export default Servicos
+
+export const query = graphql`
+query {
+  hero: file(relativePath: { eq: "heroes/DSC_0886-min.JPG" }) {
+    childImageSharp {
+      fluid(maxHeight: 666, maxWidth: 1000) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+}
+`

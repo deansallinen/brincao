@@ -60,7 +60,7 @@ class Header extends Component {
                 id="navbarBasicExample"
                 className={`navbar-menu ${menuOpen ? 'is-active' : null}`}
               >
-                <div className="navbar-end">
+                <div className="navbar-end has-text-centered is-size-3-touch">
                   <Link exact to="/" className="navbar-item">
                     Home
                   </Link>
@@ -74,9 +74,9 @@ class Header extends Component {
                   <Link to="/regras/" className="navbar-item">
                     Regras
                   </Link>
-                  <Link to="/testimonials/" className="navbar-item">
+                  {/* <Link to="/testimonials/" className="navbar-item">
                     Testimonials
-                  </Link>
+                  </Link> */}
                   <Link to="/contato/" className="navbar-item">
                     Contato
                   </Link>

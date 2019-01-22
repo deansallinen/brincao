@@ -13,9 +13,9 @@ import {
   Columns,
 } from '../components/helpers'
 
-const Regras = () => {
+const Regras = ({ data }) => {
   return (
-    <Layout>
+    <Layout hero={data.hero}>
       <Container className="content">
         <H1>Regras</H1>
         <ul>
@@ -55,3 +55,15 @@ const Regras = () => {
 }
 
 export default Regras
+
+export const query = graphql`
+query {
+  hero: file(relativePath: { eq: "heroes/15.JPG" }) {
+    childImageSharp {
+      fluid(maxHeight: 666, maxWidth: 1000) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+}
+`

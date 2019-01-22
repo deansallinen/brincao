@@ -9,7 +9,7 @@ import '../sass/mystyles.scss'
 import Sidebar from './sidebar'
 import { StaticQuery, graphql } from 'gatsby'
 
-const Layout = ({ children }) => (
+const Layout = ({ children, hero }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -34,7 +34,7 @@ const Layout = ({ children }) => (
           ]}
         />
         <Header className="section" />
-        <Hero source={Capa} className="section" />
+        <Hero source={hero} className="section" />
         <section className="section">{children}</section>
         <Footer className="section" />
       </>

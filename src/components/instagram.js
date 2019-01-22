@@ -38,16 +38,23 @@ export default () => (
     `}
     render={data => {
       return (
-        <Container>
-          <H1>Nossos Instagram</H1>
-          <Columns className="is-multiline">
-            {data.allInstaNode.edges.map(each => (
-              <Column className="is-one-third">
-                <Img fluid={each.node.localFile.childImageSharp.fluid} />
-              </Column>
-            ))}
-          </Columns>
-        </Container>
+        // <Container>
+        // <H1>Nossos Instagram</H1>
+        // <Columns className="is-multiline">
+        <div>
+          {data.allInstaNode.edges.map(each => (
+            // <Column className="is-one-third">
+            // <figure className="image is-square">
+            <div>
+
+              <Img fluid={each.node.localFile.childImageSharp.fluid} />
+            </div>
+            // </figure>
+            // </Column>
+          ))}
+        </div>
+        // </Columns>
+        // </Container>
       )
     }}
   />
