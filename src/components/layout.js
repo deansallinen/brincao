@@ -34,7 +34,7 @@ const Layout = ({ children, hero }) => (
           ]}
         />
         <Header className="section" />
-        <Hero source={hero} className="section" />
+        {hero && <Hero source={hero} className="section" />}
         <section className="section">{children}</section>
         <Footer className="section" />
       </>

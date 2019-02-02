@@ -36,20 +36,20 @@ const IndexPage = ({ data }) => (
             desvermifugados e com antipulgas em dia.
               </p>
           <div className="level">
-            <div className="level-item is-mobile">
+            <div className="is-mobile">
               <Button to="/about" >Mais sobre nós!</Button>
             </div>
           </div>
         </Column>
 
-        <Column>
-          {/* <Logo /> */}
-          <Instagram />
-        </Column>
+        {/* <Column>
+          <Logo />
+        <Instagram />
+        </Column> */}
 
       </Columns>
     </Container>
-  </Layout>
+  </Layout >
 )
 
 export default IndexPage

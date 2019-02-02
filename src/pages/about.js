@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import Img from 'gatsby-image'
 import Layout from '../components/layout'
-import { H1, H2, Container, Columns, Column } from '../components/helpers'
+import { H1, H2, Container, Columns, Column, Button } from '../components/helpers'
 
 const SecondPage = ({ data }) => (
   <Layout hero={data.hero}>
@@ -33,7 +33,11 @@ const SecondPage = ({ data }) => (
         </Column>
       </Columns>
       <H2>Nossos Espaço</H2>
-      <Link to="/">Go back to the homepage</Link>
+      <div className="level">
+        <div className="is-mobile">
+          <Button to="/servicos" >Conheça a Brincão!</Button>
+        </div>
+      </div>
     </Container >
   </Layout >
 )
