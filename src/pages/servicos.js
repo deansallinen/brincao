@@ -35,19 +35,19 @@ const Servicos = ({ data }) => (
         <Parent>
           <Child className="box">
             <p className="heading">​​​​​​​​​​Diária</p>
-            <H1>R$ 27,50</H1>
+            <H1>R$ 32,00</H1>
           </Child>
         </Parent>
         <Parent>
           <Child className="box">
             <p className="heading">Diária de hospedagem por 10 dias ou mais</p>
-            <H1>R$ 26,00</H1>
+            <H1>R$ 30,00</H1>
           </Child>
         </Parent>
         <Parent>
           <Child className="box">
             <p className="heading">Diária de hospedagem de final de semana</p>
-            <H1>R$ 30,00</H1>
+            <H1>R$ 35,00</H1>
           </Child>
         </Parent>
       </Ancestor>
@@ -55,31 +55,32 @@ const Servicos = ({ data }) => (
         Obs: A diária é de 24 horas. Será acrescido $ 5,00 por turno a mais.
       </p>
       <p>
-        Exemplo: entrada sábado pela manhã e saindo domingo de tarde: $ 30,00 +
-        $ 5,00 = $35,00
+        Exemplo: entrada sábado pela manhã e saindo domingo de tarde: $ 32,00 +
+        $ 5,00 = $37,00
       </p>
       <H2>Valores individuais para a Creche</H2>
       <Ancestor>
         <Parent>
           <Child className="box">
-            <p className="heading">3 dias x semana</p>
-            <H1>R$ 45,00</H1>
+            <p className="heading">1 diária</p>
+            <H1>R$ 20,00</H1>
           </Child>
         </Parent>
         <Parent>
           <Child className="box">
             <p className="heading">5 dias x semana</p>
-            <H1>R$ 65,00</H1>
+            <H1>R$ 85,00</H1>
           </Child>
         </Parent>
         <Parent>
           <Child className="box">
             <p className="heading">Mensal</p>
-            <H1>R$ 260,00</H1>
+            <H1>R$ 340,00</H1>
           </Child>
         </Parent>
       </Ancestor>
       <p>O segundo cãozinho tem 15% de desconto sobre o valor!</p>
+      <p>Valores novos a partir de 1 de Novembro</p>
       <p>
         Para períodos maiores, ou necessidades específicas, os valores podem ser
         ajustados. Fale com a gente!
