@@ -55,8 +55,8 @@ const Servicos = ({ data }) => (
         Obs: A diária é de 24 horas. Será acrescido $ 5,00 por turno a mais.
       </p>
       <p>
-        Exemplo: entrada sábado pela manhã e saindo domingo de tarde: $ 32,00 +
-        $ 5,00 = $37,00
+        Exemplo: entrada sábado pela manhã e saindo domingo de tarde: $ 35,00 +
+        $ 5,00 = $40,00
       </p>
       <H2>Valores individuais para a Creche</H2>
       <Ancestor>
@@ -80,7 +80,7 @@ const Servicos = ({ data }) => (
         </Parent>
       </Ancestor>
       <p>O segundo cãozinho tem 15% de desconto sobre o valor!</p>
-      <p>Valores novos a partir de 1 de Novembro</p>
+      <p>Valores novos a partir de 1 de Novembro 2019</p>
       <p>
         Para períodos maiores, ou necessidades específicas, os valores podem ser
         ajustados. Fale com a gente!
