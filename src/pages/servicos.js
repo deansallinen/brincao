@@ -35,24 +35,24 @@ const Servicos = ({ data }) => (
         <Parent>
           <Child className="box">
             <p className="heading">​​​​​​​​​​Diária</p>
-            <H1>R$ 32,00</H1>
+            <H1>R$ 35,00</H1>
           </Child>
         </Parent>
         <Parent>
           <Child className="box">
             <p className="heading">Diária de hospedagem por 10 dias ou mais</p>
-            <H1>R$ 30,00</H1>
+            <H1>R$ 32,00</H1>
           </Child>
         </Parent>
         <Parent>
           <Child className="box">
             <p className="heading">Diária de hospedagem de final de semana</p>
-            <H1>R$ 35,00</H1>
+            <H1>R$ 40,00</H1>
           </Child>
         </Parent>
       </Ancestor>
       <p>
-        Obs: A diária é de 24 horas. Será acrescido $ 5,00 por turno a mais.
+        Obs: A diária é de 24 horas. Será acrescido $ 10,00 por turno a mais.
       </p>
       <p>
         Exemplo: entrada sábado pela manhã e saindo domingo de tarde: $ 35,00 +
@@ -63,24 +63,18 @@ const Servicos = ({ data }) => (
         <Parent>
           <Child className="box">
             <p className="heading">1 diária</p>
-            <H1>R$ 20,00</H1>
+            <H1>R$ 22,00</H1>
           </Child>
         </Parent>
         <Parent>
           <Child className="box">
             <p className="heading">5 dias x semana</p>
-            <H1>R$ 85,00</H1>
-          </Child>
-        </Parent>
-        <Parent>
-          <Child className="box">
-            <p className="heading">Mensal</p>
-            <H1>R$ 340,00</H1>
+            <H1>R$ 100,00</H1>
           </Child>
         </Parent>
       </Ancestor>
       <p>O segundo cãozinho tem 15% de desconto sobre o valor!</p>
-      <p>Valores novos a partir de 1 de Novembro 2019</p>
+      <p>Valores novos a partir de 1 de Novembro 2020</p>
       <p>
         Para períodos maiores, ou necessidades específicas, os valores podem ser
         ajustados. Fale com a gente!
