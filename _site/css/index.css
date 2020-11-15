@@ -1,0 +1,65 @@
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+.navbar-item {
+  padding: 0.5em;
+}
+
+nav .active {
+  color: black;
+  text-decoration: underline;
+}
+
+footer {
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  padding-bottom: 0.25em;
+}
+
+.social {
+  width: 1em;
+  fill: currentColor;
+  padding-right: 0.5em;
+}
+
+.pricelist {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.pricelist .box {
+  width: 10em;
+  color: #ddd;
+  padding: 1em;
+  border-radius: 1em;
+  border: 1px solid #eee;
+  margin: 1em 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.box-title {
+  color: #333;
+}

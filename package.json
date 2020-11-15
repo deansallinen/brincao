@@ -1,47 +1,19 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
+  "name": "brincao",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
-  "dependencies": {
-    "babel-plugin-styled-components": "^1.8.0",
-    "bulma": "^0.7.2",
-    "gatsby": "^2.0.0",
-    "gatsby-image": "^2.0.20",
-    "gatsby-plugin-manifest": "^2.0.10",
-    "gatsby-plugin-offline": "^2.0.17",
-    "gatsby-plugin-react-helmet": "^3.0.2",
-    "gatsby-plugin-sass": "^2.0.4",
-    "gatsby-plugin-sharp": "^2.0.17",
-    "gatsby-plugin-styled-components": "^3.0.3",
-    "gatsby-source-filesystem": "^2.0.8",
-    "gatsby-source-instagram": "^0.2.0",
-    "gatsby-transformer-sharp": "^2.1.8",
-    "lorem-ipsum": "^1.0.6",
-    "node-sass": "^4.10.0",
-    "react": "^16.6.3",
-    "react-burger-menu": "^2.5.4",
-    "react-dom": "^16.6.3",
-    "react-helmet": "^5.2.0",
-    "react-responsive": "^6.0.1",
-    "styled-components": "^4.1.1"
-  },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "MIT",
+  "description": "website for brincao",
+  "main": "index.js",
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop -H 0.0.0.0 -p 8000",
-    "format": "prettier --write 'src/**/*.js'",
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "devDependencies": {
-    "prettier": "^1.15.2",
-    "tailwindcss": "^0.7.3"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  }
+    "url": "git+https://github.com/deansallinen/brincao.git"
+  },
+  "author": "dean sallinen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/deansallinen/brincao/issues"
+  },
+  "homepage": "https://github.com/deansallinen/brincao#readme"
 }
