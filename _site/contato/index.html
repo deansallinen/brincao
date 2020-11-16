@@ -7,31 +7,45 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
         <link rel="stylesheet" href="https://unpkg.com/pattern.css" >
         <link rel="stylesheet" href="/css/index.css">
+	<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
         <title>Brincao</title>
     </head>
     <body>
-        <nav>
-    <div class="">
-        <a href="/">
-            <img src='/img/logo.png' width=179 height=80/>
-        </a>
-    </div>
-    <ul style="">
-        <li>
-            <a href="/about/" class="navbar-item ">Quem Somos</a>
-        </li>
-        <li>
-            <a href="/servicos/" class="navbar-item ">Serviços &amp; Preços</a>
-        </li>
-        <li>
-            <a href="/regras/" class="navbar-item ">Regras</a>
-        </li>
-        <li>
-            <a href="/contato/" class="navbar-item active">Contato</a>
-        </li>
-    </ul>
+        <nav x-data="{open:false}">
+	<div class="navbar">
+		<div class="logo">
+			<a href="/">
+				<img src='/img/logo.png' alt="Brincao home" width=179 height=80/>
+			</a>
+		</div>
+		<div class="icon" @click="open=!open">
+			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /> </svg>
+		</div>
+	</div>
+	<div class="menu" :class="{'hidden': !open}" x-show="true" @click.away="open=false" >
+		<ul class="links">
+			<li class="navbar-item">
+				<a href="/about/" class="">Quem Somos</a>
+			</li>
+			<li class="navbar-item">
+				<a href="/servicos/" class="">Serviços &amp; Preços</a>
+			</li>
+			<li class="navbar-item">
+				<a href="/regras/" class="">Regras</a>
+			</li>
+			<li class="navbar-item">
+				<a href="/contato/" class="active">Contato</a>
+			</li>
+		</ul>
+	</div>
 </nav>
+
         <div>
+	
+</div>
+
+        <h1>Localização</h1>
+<div>
     <iframe
       width="100%"
       height="auto"
@@ -40,6 +54,11 @@
       src="https://www.google.com/maps/embed/v1/place?q=Brinc%C3%A3o%20RS%20129%2C%20n.%20920%20%20Ch%C3%A1cara%20da%20Bandeira%2C%20Linha%20S%C3%A3o%20Jos%C3%A9%20%20Estrela%2C%20RS%20%2095880-000%20Brasil&key=AIzaSyChhUqUbak8-D52lLYY0C3JKH6w5hxVA7Q"
       allowfullscreen></iframe>
 </div>
+<section>
+  <h2>Horário</h2>
+  <p>Oferece um horário amplo, das <strong>7h às 19h</strong>, ou personalizado, conforme sua necessidade.</p>
+</section>
+
         <footer>
     <div class="container">
         <section class="address">

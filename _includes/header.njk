@@ -1,21 +1,28 @@
-<nav>
-    <div class="">
-        <a href="/">
-            <img src='/img/logo.png' width=179 height=80/>
-        </a>
-    </div>
-    <ul style="">
-        <li>
-            <a href="/about/" class="navbar-item {{ 'active' if '/about' in page.url }}">Quem Somos</a>
-        </li>
-        <li>
-            <a href="/servicos/" class="navbar-item {{ 'active' if '/servicos' in page.url }}">Serviços &amp; Preços</a>
-        </li>
-        <li>
-            <a href="/regras/" class="navbar-item {{ 'active' if '/regras' in page.url }}">Regras</a>
-        </li>
-        <li>
-            <a href="/contato/" class="navbar-item {{ 'active' if '/contato' in page.url }}">Contato</a>
-        </li>
-    </ul>
+<nav x-data="{open:false}">
+	<div class="navbar">
+		<div class="logo">
+			<a href="/">
+				<img src='/img/logo.png' alt="Brincao home" width=179 height=80/>
+			</a>
+		</div>
+		<div class="icon" @click="open=!open">
+			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /> </svg>
+		</div>
+	</div>
+	<div class="menu" :class="{'hidden': !open}" x-show="true" @click.away="open=false" >
+		<ul class="links">
+			<li class="navbar-item">
+				<a href="/about/" class="{{ 'active' if '/about' in page.url }}">Quem Somos</a>
+			</li>
+			<li class="navbar-item">
+				<a href="/servicos/" class="{{ 'active' if '/servicos' in page.url }}">Serviços &amp; Preços</a>
+			</li>
+			<li class="navbar-item">
+				<a href="/regras/" class="{{ 'active' if '/regras' in page.url }}">Regras</a>
+			</li>
+			<li class="navbar-item">
+				<a href="/contato/" class="{{ 'active' if '/contato' in page.url }}">Contato</a>
+			</li>
+		</ul>
+	</div>
 </nav>

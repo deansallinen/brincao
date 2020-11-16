@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/deansallinen/brincao/issues"
   },
-  "homepage": "https://github.com/deansallinen/brincao#readme"
+  "homepage": "https://github.com/deansallinen/brincao#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.1"
+  }
 }

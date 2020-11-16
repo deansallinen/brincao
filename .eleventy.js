@@ -4,6 +4,8 @@ module.exports = function(eleventyConfig) {
     // Copy `img/` to `_site/img`
     eleventyConfig.addPassthroughCopy("img");
     eleventyConfig.addPassthroughCopy("css");
+eleventyConfig.addPassthroughCopy('img/favicon.ico');
+
 
     // eleventyConfig.setTemplateFormats([
     //   "md",

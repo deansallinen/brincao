@@ -7,60 +7,71 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
         <link rel="stylesheet" href="https://unpkg.com/pattern.css" >
         <link rel="stylesheet" href="/css/index.css">
+	<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
         <title>Brincao</title>
     </head>
     <body>
-        <nav>
-    <div class="">
-        <a href="/">
-            <img src='/img/logo.png' width=179 height=80/>
-        </a>
-    </div>
-    <ul style="">
-        <li>
-            <a href="/about/" class="navbar-item ">Quem Somos</a>
-        </li>
-        <li>
-            <a href="/servicos/" class="navbar-item ">Serviços &amp; Preços</a>
-        </li>
-        <li>
-            <a href="/regras/" class="navbar-item ">Regras</a>
-        </li>
-        <li>
-            <a href="/contato/" class="navbar-item ">Contato</a>
-        </li>
-    </ul>
+        <nav x-data="{open:false}">
+	<div class="navbar">
+		<div class="logo">
+			<a href="/">
+				<img src='/img/logo.png' alt="Brincao home" width=179 height=80/>
+			</a>
+		</div>
+		<div class="icon" @click="open=!open">
+			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /> </svg>
+		</div>
+	</div>
+	<div class="menu" :class="{'hidden': !open}" x-show="true" @click.away="open=false" >
+		<ul class="links">
+			<li class="navbar-item">
+				<a href="/about/" class="">Quem Somos</a>
+			</li>
+			<li class="navbar-item">
+				<a href="/servicos/" class="">Serviços &amp; Preços</a>
+			</li>
+			<li class="navbar-item">
+				<a href="/regras/" class="">Regras</a>
+			</li>
+			<li class="navbar-item">
+				<a href="/contato/" class="">Contato</a>
+			</li>
+		</ul>
+	</div>
 </nav>
-         
-   <h1>A Brincão é um novo tipo de creche para cães!</h1>
-          <p>
-            Uma creche idealizada a partir do conceito de “tua casa para
-            minha casa.”
-              </p>
-          <ul>
-            <li>
-              O sistema de funcionamento da creche Brincão é inédito na
-              região.
-                </li>
-            <li>
-              Oferecemos também hospedagem, com atendimento e serviços de um
-              hotel.
-                </li>
-            <li>Somente atendemos cães de pequeno porte, até 15 kg.</li>
-          </ul>
-          <p>
-            O lugar ideal para seu cão ficar à vontade, livre, e seguro com
-            outros amiguinhos.
-              </p>
-          <p>
-            Para Cãezinhos de pequeno porte, saudáveis, vacinados,
-            desvermifugados e com antipulgas em dia.
-              </p>
-          <div className="level">
-            <div className="is-mobile">
-              <button to="/about" >Mais sobre nós!</button>
-            </div>
-          </div>
+
+        <div>
+	
+		<img src=/img/heroes/capa.jpg alt='picture of daycare' class="hero"/>
+	
+</div>
+
+        <h1>A Brincão é um novo tipo de creche para cães!</h1>
+<p>
+Uma creche idealizada a partir do conceito de “tua casa para
+minha casa.”
+</p>
+<ul>
+	<li>
+		O sistema de funcionamento da creche Brincão é inédito na
+		região.
+	</li>
+	<li>
+		Oferecemos também hospedagem, com atendimento e serviços de um
+		hotel.
+	</li>
+	<li>Somente atendemos cães de pequeno porte, até 15 kg.</li>
+</ul>
+<p>
+O lugar ideal para seu cão ficar à vontade, livre, e seguro com
+outros amiguinhos.
+</p>
+<p>
+Para Cãezinhos de pequeno porte, saudáveis, vacinados,
+desvermifugados e com antipulgas em dia.
+</p>
+<a href="/about" >Mais sobre nós!</a>
+
         <footer>
     <div class="container">
         <section class="address">

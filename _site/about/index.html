@@ -7,59 +7,77 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
         <link rel="stylesheet" href="https://unpkg.com/pattern.css" >
         <link rel="stylesheet" href="/css/index.css">
+	<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
         <title>Brincao</title>
     </head>
     <body>
-        <nav>
-    <div class="">
-        <a href="/">
-            <img src='/img/logo.png' width=179 height=80/>
-        </a>
-    </div>
-    <ul style="">
-        <li>
-            <a href="/about/" class="navbar-item active">Quem Somos</a>
-        </li>
-        <li>
-            <a href="/servicos/" class="navbar-item ">Serviços &amp; Preços</a>
-        </li>
-        <li>
-            <a href="/regras/" class="navbar-item ">Regras</a>
-        </li>
-        <li>
-            <a href="/contato/" class="navbar-item ">Contato</a>
-        </li>
-    </ul>
+        <nav x-data="{open:false}">
+	<div class="navbar">
+		<div class="logo">
+			<a href="/">
+				<img src='/img/logo.png' alt="Brincao home" width=179 height=80/>
+			</a>
+		</div>
+		<div class="icon" @click="open=!open">
+			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /> </svg>
+		</div>
+	</div>
+	<div class="menu" :class="{'hidden': !open}" x-show="true" @click.away="open=false" >
+		<ul class="links">
+			<li class="navbar-item">
+				<a href="/about/" class="active">Quem Somos</a>
+			</li>
+			<li class="navbar-item">
+				<a href="/servicos/" class="">Serviços &amp; Preços</a>
+			</li>
+			<li class="navbar-item">
+				<a href="/regras/" class="">Regras</a>
+			</li>
+			<li class="navbar-item">
+				<a href="/contato/" class="">Contato</a>
+			</li>
+		</ul>
+	</div>
 </nav>
-        
-<H1>Quem Somos</H1>
-<div>
-  <div>
-    <blockquote>
-              "O lugar ideal para seu cão ficar  à vontade, livre, e seguro  com outros amiguinhos!"
-      </blockquote>
-    <p>A Brincão é um espaço que ama e respeita seu cãozinho. Ele passa o
-              dia como se estivesse na rotina da sua casa, mas com uma área especial
-          para entretenimento. </p>
-    <p>Um amplo gramado conta com piscina de bolinhas,
-    escorregador, casinha, túnel, brinquedos e amplo espaço para o banho
-    de sol. Seu cão também tem várias opções de descanso internos em
-          sofás, caminhas, como ele preferir e estiver acostumado na sua casa.</p>
-    <p>
-            Além da socialização, ele brinca, aprende e interage, reduzindo o
-            nível de estresse. No retorno para casa, seu cão vai muito mais feliz,
-          com a garantia de ter sido alimentado e bem cuidado.</p>
-  </div>
-  <div>
-    <img/>
-  </div>
+
+        <div>
+	
+		<img src=/img/heroes/DSC_0886-min.JPG alt='picture of daycare' class="hero"/>
+	
+</div>
+
+        <H1>Quem Somos</H1>
+<p>
+A Brincão foi pensada para o bem-estar de seu cãozinho. Ampla área coberta e ao ar livre, conforto térmico, sempre na companhia das pessoas
+que vivem na casa, que zelam pela sua segurança e diversão. 
+<p>
+</p>
+As refeições, tipo e número, serão de acordo com a rotina da sua casa,
+adaptados à rotina da Brincão. As necessidades dos cãezinhos são
+personalizadas!
+</p>
+<div class="lilian-container">
+	<div class="lilian pattern-dots-sm" >
+		<img src="/img/14.jpg" alt="lilian" loading="lazy"/>
+	</div>
+	<blockquote>
+		"O lugar ideal para seu cão ficar  à vontade, livre, e seguro  com outros amiguinhos!"
+	</blockquote>
 </div>
 <h2>Nossos Espaço</h2>
-<div className="level">
-  <div className="is-mobile">
-    <button to="/servicos" >Conheça a Brincão!</button>
-  </div>
-</div>
+<p>A Brincão é um espaço que ama e respeita seu cãozinho. Ele passa o
+dia como se estivesse na rotina da sua casa, mas com uma área especial
+para entretenimento. </p>
+<p>Um amplo gramado conta com piscina de bolinhas,
+escorregador, casinha, túnel, brinquedos e amplo espaço para o banho
+de sol. Seu cão também tem várias opções de descanso internos em
+sofás, caminhas, como ele preferir e estiver acostumado na sua casa.</p>
+<p>
+Além da socialização, ele brinca, aprende e interage, reduzindo o
+nível de estresse. No retorno para casa, seu cão vai muito mais feliz,
+com a garantia de ter sido alimentado e bem cuidado.</p>
+<img src="/img/heroes/DSC_0880-min.JPG" alt="lilian" loading="lazy"/>
+
         <footer>
     <div class="container">
         <section class="address">
