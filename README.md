@@ -1,23 +1,5 @@
 # Brincao
-
-TODO:
-
-- Finish migration to Gatsby V2
-- Deploy to Netlify
-- Add contact form from Netlify
-- Change hero image per page
-- Standardize typography
-- Media queries for responsiveness
-- Add plugins:
-  - ~Gatsby React Helmet~
-  - Sitemap
-  - Google Analytics
-  - Netlify
-  - ~Styled Components~
-  - Typography?
-  - gatsby-source-instagram
-- ~Bulma~
-- ~Rewrite Menu~
+The webiste for Brazilian dog daycare Brincao
 
 ## Deploy
 
