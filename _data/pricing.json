@@ -1,13 +1,13 @@
 {
     "hospedagem" :
     {
-        "diaria" : 40,
-        "10oumais" : 37,
-        "finaldesemana" : 50
+        "diaria" : 45,
+        "10oumais" : 41,
+        "finaldesemana" : 60
     },
     "individuais" :
     {
-        "1diaria" : 25,
-        "5dias" : 115
+        "1diaria" : 30,
+        "5dias" : 130
     }
 }
