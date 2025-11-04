@@ -19,7 +19,7 @@ layout: layout.njk
   <h2>Hospedagem</h2>
   <div class="pricelist">
     <div class="box pattern-cross-dots-sm">
-      <span class="box-title">​​​​​​​​​​Diária</span>
+      <span class="box-title">Diária</span>
       <h3>R$ {{pricing.hospedagem.diaria}},00</h3>
     </div>
     <div class="box pattern-cross-dots-sm">
@@ -32,11 +32,11 @@ layout: layout.njk
     </div>
   </div>
   <p>
-        Obs: A diária é de 24 horas. Será acrescido $ 15,00 por turno a mais.
+        Obs: A diária é de 24 horas. Será acrescido R$15,00 por turno a mais.
       </p>
   <p>
-        Exemplo: entrada sábado pela manhã e saindo domingo de tarde: $60,00 +
-        $15,00 = $70,00
+        Exemplo: entrada sábado pela manhã e saindo domingo de tarde: R${{pricing.hospedagem.diaria}},00 +
+        R$15,00 = R${{pricing.hospedagem.diaria + 15}},00
       </p>
 </section>
 
@@ -53,7 +53,7 @@ layout: layout.njk
     </div>
   </div>
   <p>O segundo cãozinho tem 15% de desconto sobre o valor!</p>
-  <p>Valores novos a partir de 1 de Novembro 2024</p>
+  <p>Valores novos a partir de 1 de Novembro {{pricing.year_updated}}</p>
   <p>
         Para períodos maiores, ou necessidades específicas, os valores podem ser
         ajustados. <a href="/contato">Fale com a gente!</a>
