@@ -1,0 +1,68 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import hero from "../assets/img/heroes/DSC_0886-min.JPG";
+import image1 from "../assets/img/14.jpg";
+import image2 from "../assets/img/heroes/DSC_0880-min.JPG";
+---
+
+<Layout>
+	<section>
+		<Image
+			src={hero}
+			alt="interior do edifício"
+			style="width: 100%; max-height: 500px; object-fit: cover;"
+		/>
+	</section>
+	<section>
+		<h1>Quem Somos</h1>
+		<p>
+			A Brincão foi pensada para o bem-estar de seu cãozinho. Ampla área coberta
+			e ao ar livre, conforto térmico, sempre na companhia das pessoas que vivem
+			na casa, que zelam pela sua segurança e diversão.
+		</p>
+		<p>
+			As refeições, tipo e número, serão de acordo com a rotina da sua casa,
+			adaptados à rotina da Brincão. As necessidades dos cãezinhos são
+			personalizadas!
+		</p>
+	</section>
+
+	<section class="grid">
+		<section>
+			<blockquote>
+				"O lugar ideal para seu cão ficar à vontade, livre, e seguro com outros
+				amiguinhos!"
+			</blockquote>
+			<h2>Nossos Espaço</h2>
+			<p>
+				A Brincão é um espaço que ama e respeita seu cãozinho. Ele passa o dia
+				como se estivesse na rotina da sua casa, mas com uma área especial para
+				entretenimento.
+			</p>
+			<p>
+				Um amplo gramado conta com piscina de bolinhas, escorregador, casinha,
+				túnel, brinquedos e amplo espaço para o banho de sol. Seu cão também tem
+				várias opções de descanso internos em sofás, caminhas, como ele preferir
+				e estiver acostumado na sua casa.
+			</p>
+			<p>
+				Além da socialização, ele brinca, aprende e interage, reduzindo o nível
+				de estresse. No retorno para casa, seu cão vai muito mais feliz, com a
+				garantia de ter sido alimentado e bem cuidado.
+			</p>
+		</section>
+		<Image src={image1} alt="lilian" loading="lazy" />
+	</section>
+
+	<section>
+		<Image src={image2} alt="brinquedos ao ar livre" loading="lazy" />
+	</section>
+</Layout>
+
+<style>
+	.quote {
+		align-items: center;
+		justify-items: center;
+	}
+</style>
