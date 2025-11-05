@@ -1,5 +1,10 @@
 ---
 import Logo from "./logo.astro";
+const { pathname } = Astro.url;
+
+function isCurrent(name: string) {
+	return pathname.replace(/\//g, "") === name ? "page" : "false";
+}
 ---
 
 <header class="container">
@@ -14,24 +19,18 @@ import Logo from "./logo.astro";
 
 		<ul>
 			<li>
-				<a href="/about/" class="{{ 'active' if '/about' in page.url }}"
-					>Quem Somos</a
-				>
+				<a href="/about/" aria-current={isCurrent("about")}> Quem Somos </a>
 			</li>
 			<li>
-				<a href="/servicos/" class="{{ 'active' if '/servicos' in page.url }}"
-					>Serviços &amp; Preços</a
-				>
+				<a href="/servicos/" aria-current={isCurrent("servicos")}>
+					Serviços &amp; Preços
+				</a>
 			</li>
 			<li>
-				<a href="/regras/" class="{{ 'active' if '/regras' in page.url }}"
-					>Regras</a
-				>
+				<a href="/regras/" aria-current={isCurrent("regras")}> Regras </a>
 			</li>
 			<li>
-				<a href="/contato/" class="{{ 'active' if '/contato' in page.url }}"
-					>Contato</a
-				>
+				<a href="/contato/" aria-current={isCurrent("contato")}> Contato </a>
 			</li>
 		</ul>
 	</nav>
