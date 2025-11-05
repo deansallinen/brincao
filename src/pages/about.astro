@@ -11,7 +11,10 @@ import image2 from "../assets/img/heroes/DSC_0880-min.JPG";
 		<Image
 			src={hero}
 			alt="interior do edifício"
-			style="width: 100%; max-height: 500px; object-fit: cover;"
+			priority
+			layout="full-width"
+			fit="cover"
+			style="max-height: 500px;"
 		/>
 	</section>
 	<section>
@@ -52,11 +55,11 @@ import image2 from "../assets/img/heroes/DSC_0880-min.JPG";
 				garantia de ter sido alimentado e bem cuidado.
 			</p>
 		</section>
-		<Image src={image1} alt="lilian" loading="lazy" />
+		<Image src={image1} alt="lilian" />
 	</section>
 
 	<section>
-		<Image src={image2} alt="brinquedos ao ar livre" loading="lazy" />
+		<Image src={image2} alt="brinquedos ao ar livre" />
 	</section>
 </Layout>
 
